@@ -1,4 +1,3 @@
-
 # SaladWrap 
 
 
@@ -52,7 +51,7 @@ console.log('Balance:', await sw.balance())
 ```
 ## Console output
 
-```json
+```js
 Profile: {
   email: 'Your Email',
   extensions: { minecraftUsername: 'M3zo' },
