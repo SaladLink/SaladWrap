@@ -2,17 +2,24 @@
   "name": "saladwrap",
   "version": "1.0.0",
   "description": "A JavaScript wrapper for the Salad.io API!",
-  "main": "src/index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "wrapper.js",
+  "directories": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node libtest.js",
+    "start": "node libtest.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/SaladLink/SaladWrap"
   },
   "author": "SaladLink",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "axios-cookiejar-support": "^2.0.4",
+    "index.js": "0.0.3",
+    "prompt-sync": "^4.2.0",
+    "src": "^1.1.2",
+    "tough-cookie": "^4.0.0"
+  }
 }
