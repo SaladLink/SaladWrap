@@ -20,14 +20,14 @@ A lightweight wrapper for the Salad.io API
 - [Maintainers](#Maintainers)
 ## Installation
 
-Install pokedev.js with npm
+Install saladwrap.js with npm
 
 ```bash
-  npm install pokedev.js
+  npm install saladwrap.js
 ```
-Install pokedev.js with yarn
+Install saladwrap.js with yarn
 ```bash
-  yarn add pokedev.js
+  yarn add saladwrap.js
 ```
     
 ## Code Example
