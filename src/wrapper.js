@@ -1,5 +1,6 @@
-const { SaladAuth } = require('/home/runner/SaladWrap/src/api/auth.js');
-const { SaladWrapError } = require('/home/runner/SaladWrap/src/error.js');
+const { SaladAuth } = require('./api/auth.js');
+const { SaladProfile } = require('../src/api/profile.js');
+const { SaladWrapError } = require('../src/error.js');
 
 class SaladWrapper {
   constructor() {
@@ -24,59 +25,23 @@ class SaladWrapper {
     return this.session
   }
 
-  async profile() {
+  async getProfile() {
+    const profile = await new SaladProfile(this.session);
+    return profile
+  }
+
+  async _getProfile() {
     const profile_ext = '/api/v1/profile';
     const profile_data = await this.session.get(profile_ext)
     return profile_data.data
   }
 
-  async email() {
-    const profile_ext = '/api/v1/profile';
-    const profile_data = await this.session.get(profile_ext)
-    return profile_data.data['email']
-  }
-
-  async extensions() {
-    const profile_ext = '/api/v1/profile';
-    const profile_data = await this.session.get(profile_ext)
-    return profile_data.data['extensions']
-  }
-
-  async minecraft() {
-    const profile_ext = '/api/v1/profile';
-    const profile_data = await this.session.get(profile_ext)
-    return profile_data.data['extensions']['minecraftUsername']
-  }
-
-  async id() {
-    const profile_ext = '/api/v1/profile';
-    const profile_data = await this.session.get(profile_ext)
-    return profile_data.data['id']
-  }
-
-  async username() {
-    const profile_ext = '/api/v1/profile';
-    const profile_data = await this.session.get(profile_ext)
-    return profile_data.data['username']
-  }
-
-  async balance() {
+  async _getBalance() {
     const balance_ext = '/api/v1/profile/balance'
     const balance_data = await this.session.get(balance_ext)
     return balance_data.data
   }
 
-  async currentBalance() {
-    const balance_ext = '/api/v1/profile/balance'
-    const balance_data = await this.session.get(balance_ext)
-    return balance_data.data['currentBalance']
-  }
-
-  async lifetimeBalance() {
-    const balance_ext = '/api/v1/profile/balance'
-    const balance_data = await this.session.get(balance_ext)
-    return balance_data.data['lifetimeBalance']
-  }
   
 }
 

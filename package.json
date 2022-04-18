@@ -19,7 +19,7 @@
     "axios-cookiejar-support": "^2.0.4",
     "index.js": "0.0.3",
     "prompt-sync": "^4.2.0",
-    "src": "^1.1.2",
+    "src": "^1.0.0",
     "tough-cookie": "^4.0.0"
   }
 }
